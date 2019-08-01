@@ -1,0 +1,10 @@
+C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\bin\Release\netcoreapp2.1\DesktopClean.deps.json
+C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\bin\Release\netcoreapp2.1\DesktopClean.runtimeconfig.json
+C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\bin\Release\netcoreapp2.1\DesktopClean.runtimeconfig.dev.json
+C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\bin\Release\netcoreapp2.1\DesktopClean.dll
+C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\bin\Release\netcoreapp2.1\DesktopClean.pdb
+C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\obj\Release\netcoreapp2.1\DesktopClean.csproj.CoreCompileInputs.cache
+C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\obj\Release\netcoreapp2.1\DesktopClean.AssemblyInfoInputs.cache
+C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\obj\Release\netcoreapp2.1\DesktopClean.AssemblyInfo.cs
+C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\obj\Release\netcoreapp2.1\DesktopClean.dll
+C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\obj\Release\netcoreapp2.1\DesktopClean.pdb
