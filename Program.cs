@@ -10,7 +10,7 @@ namespace DesktopClean
         {
 
             MoveFiles moveFiles = new MoveFiles();
-            moveFiles.CleanDesktop("jpg", "jpg|gif|img");
+            moveFiles.CopyFiles("jpg", "jpg|gif|png|jpeg");
 
         }
 

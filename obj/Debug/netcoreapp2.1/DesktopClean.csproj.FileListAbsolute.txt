@@ -9,3 +9,14 @@ C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\obj\Debug\netcoreapp2.1\D
 C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\obj\Debug\netcoreapp2.1\DesktopClean.AssemblyInfo.cs
 C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\obj\Debug\netcoreapp2.1\DesktopClean.dll
 C:\Users\Henrik\source\repos\DesktopClean\DesktopClean\obj\Debug\netcoreapp2.1\DesktopClean.pdb
+C:\Users\Henrik\source\repos\DesktopClean-git\bin\Debug\netcoreapp2.1\DesktopClean.deps.json
+C:\Users\Henrik\source\repos\DesktopClean-git\bin\Debug\netcoreapp2.1\DesktopClean.runtimeconfig.json
+C:\Users\Henrik\source\repos\DesktopClean-git\bin\Debug\netcoreapp2.1\DesktopClean.runtimeconfig.dev.json
+C:\Users\Henrik\source\repos\DesktopClean-git\bin\Debug\netcoreapp2.1\DesktopClean.dll
+C:\Users\Henrik\source\repos\DesktopClean-git\bin\Debug\netcoreapp2.1\DesktopClean.pdb
+C:\Users\Henrik\source\repos\DesktopClean-git\obj\Debug\netcoreapp2.1\DesktopClean.csprojAssemblyReference.cache
+C:\Users\Henrik\source\repos\DesktopClean-git\obj\Debug\netcoreapp2.1\DesktopClean.csproj.CoreCompileInputs.cache
+C:\Users\Henrik\source\repos\DesktopClean-git\obj\Debug\netcoreapp2.1\DesktopClean.AssemblyInfoInputs.cache
+C:\Users\Henrik\source\repos\DesktopClean-git\obj\Debug\netcoreapp2.1\DesktopClean.AssemblyInfo.cs
+C:\Users\Henrik\source\repos\DesktopClean-git\obj\Debug\netcoreapp2.1\DesktopClean.dll
+C:\Users\Henrik\source\repos\DesktopClean-git\obj\Debug\netcoreapp2.1\DesktopClean.pdb

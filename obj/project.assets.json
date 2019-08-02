@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Henrik\\source\\repos\\DesktopClean\\DesktopClean\\DesktopClean.csproj",
+      "projectUniqueName": "C:\\Users\\Henrik\\source\\repos\\DesktopClean-git\\DesktopClean.csproj",
       "projectName": "DesktopClean",
-      "projectPath": "C:\\Users\\Henrik\\source\\repos\\DesktopClean\\DesktopClean\\DesktopClean.csproj",
+      "projectPath": "C:\\Users\\Henrik\\source\\repos\\DesktopClean-git\\DesktopClean.csproj",
       "packagesPath": "C:\\Users\\Henrik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Henrik\\source\\repos\\DesktopClean\\DesktopClean\\obj\\",
+      "outputPath": "C:\\Users\\Henrik\\source\\repos\\DesktopClean-git\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
