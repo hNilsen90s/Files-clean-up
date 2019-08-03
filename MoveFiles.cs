@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace DesktopClean
@@ -11,25 +12,25 @@ namespace DesktopClean
         /// <summary>
         /// Copy and delete files from one location to another, default location is desktop.
         /// </summary>
-        /// <param name="folderName">Name of the folder to create</param>
+        /// <param name="newFolder">Name of the folder to create</param>
         /// <param name="extenstion">What file extenstions to move (use | to add more than one)</param>
         /// <param name="path">File path we are looking for files, default is Desktop</param>
 
-        public void CopyFiles(string folderName, string extenstion, string path = null)
+        public void CopyFiles(string newFolder, string extenstion, string path = null)
         {
 
             // Predefine vars
-            string cleanUpPath;
+            string pathToMoveFilesFrom;
             string[] arrExtenstion = extenstion.Split("|".ToCharArray());
 
             // Hacky way of checking a default value
             if (path == null)
             {
-                cleanUpPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString();
+                pathToMoveFilesFrom = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).ToString();
             }
             else
             {
-                cleanUpPath = path;
+                pathToMoveFilesFrom = path;
             }
 
             // Loop the extenstions to pre add a dot on the extenstions
@@ -38,11 +39,20 @@ namespace DesktopClean
                 arrExtenstion[i] = "." + arrExtenstion[i];
             }
 
-            // Path to desktop extentions
-            string directoryEndpoint = cleanUpPath + @"\" + folderName + @"\";
+            // Path to folder
+            string directoryEndpoint = pathToMoveFilesFrom + @"\" + newFolder + @"\";
+
+            // Get all files from path
+            var getFilesFromPath = Directory.GetFiles(pathToMoveFilesFrom);
+
+            // Get the public (all users) desktop path, and join them with the current user desktop path
+            if(path == null)
+            {
+                getFilesFromPath.Union(Directory.GetFiles(System.Environment.GetFolderPath(Environment.SpecialFolder.CommonDesktopDirectory).ToString()));
+            }
 
             // Find all files in given directory
-            foreach (var fileInDirectoryPath in Directory.GetFiles(cleanUpPath))
+            foreach (var fileInDirectoryPath in getFilesFromPath)
             {
 
                 // Get extenstion on given file
@@ -69,7 +79,7 @@ namespace DesktopClean
                         // Check if the folder exsist
                         if(!Directory.Exists(directoryEndpoint))
                         {
-                            Console.Write("Creating new folder: {0}", folderName);
+                            Console.Write("Creating new folder: {0}", newFolder);
                             
                             // Create a new folder if it doesnt exsist
                             System.IO.Directory.CreateDirectory(directoryEndpoint);
@@ -80,6 +90,8 @@ namespace DesktopClean
 
                         // Move file from one location to another
                         System.IO.Directory.Move(fileToCopyPath, directoryEndpoint + @"\" + System.IO.Path.GetFileName(fileInDirectoryPath));
+
+                        Console.WriteLine("{0} \t copied from \t {1} \t to \t {2}", System.IO.Path.GetFileName(fileInDirectoryPath), fileToCopyPath, directoryEndpoint);
 
                     }
                     catch(Exception e)

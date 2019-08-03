@@ -10,9 +10,11 @@ namespace DesktopClean
         {
 
             MoveFiles moveFiles = new MoveFiles();
+            moveFiles.CopyFiles("exe", "exe|apk|app|bat|cgi|com|lnk");
             moveFiles.CopyFiles("jpg", "jpg|gif|png|jpeg");
+            moveFiles.CopyFiles("torrent", "torrent");
             moveFiles.CopyFiles("photoshop", "psd");
-            moveFiles.CopyFiles("docs", "doc|docx|log|msg|rtf|tex|txt");
+            moveFiles.CopyFiles("docs", "doc|docx|log|msg|rtf|tex|txt|pdf");
             moveFiles.CopyFiles("audio", "mp3|mpa|wav|wma|aif|iff|m3u|m4a");
             moveFiles.CopyFiles("video", "3g2|avi|flv|m4v|asf|mp4|rm|swf|vob|mov|wmv");
             moveFiles.CopyFiles("exe", "exe|apk|app|bat|cgi|com|lnk");
