@@ -9,7 +9,7 @@ namespace DesktopClean
     {
 
         /// <summary>
-        /// Copy and delete files from one location to another
+        /// Copy and delete files from one location to another, default location is desktop.
         /// </summary>
         /// <param name="folderName">Name of the folder to create</param>
         /// <param name="extenstion">What file extenstions to move (use | to add more than one)</param>
@@ -55,26 +55,32 @@ namespace DesktopClean
                 {
                     if (pathExtenstion == arrExtenstion[i])
                     {
-                        Console.WriteLine("check");
                         foundExtenstion = true;
                     }
                 }
 
-                // If extenstion is found, try to copy and delete
+                // If extenstion is found, try to copy the file
                 if (foundExtenstion)
                 {
 
                     try
                     {
-                        // Create a new folder if it doesnt exsist
-                        System.IO.Directory.CreateDirectory(directoryEndpoint);
+
+                        // Check if the folder exsist
+                        if(!Directory.Exists(directoryEndpoint))
+                        {
+                            Console.Write("Creating new folder: {0}", folderName);
+                            
+                            // Create a new folder if it doesnt exsist
+                            System.IO.Directory.CreateDirectory(directoryEndpoint);
+                        }
 
                         // Get full path name
                         string fileToCopyPath = System.IO.Path.GetFullPath(fileInDirectoryPath);
 
-                        // Copy file
-                        File.Copy(fileToCopyPath, directoryEndpoint + @"\" + System.IO.Path.GetFileName(fileInDirectoryPath), true);
-                        File.Delete(fileToCopyPath);
+                        // Move file from one location to another
+                        System.IO.Directory.Move(fileToCopyPath, directoryEndpoint + @"\" + System.IO.Path.GetFileName(fileInDirectoryPath));
+
                     }
                     catch(Exception e)
                     {
@@ -84,7 +90,8 @@ namespace DesktopClean
 
                 }
             }
-        } // END CleanDesktop
+
+        }
 
     }
 }
