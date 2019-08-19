@@ -10,6 +10,9 @@ namespace DesktopClean
         {
 
             MoveFiles moveFiles = new MoveFiles();
+
+            /*
+            moveFiles.CopyFiles("div", "*");
             moveFiles.CopyFiles("exe", "exe|apk|app|bat|cgi|com|lnk");
             moveFiles.CopyFiles("jpg", "jpg|gif|png|jpeg");
             moveFiles.CopyFiles("torrent", "torrent");
@@ -20,6 +23,7 @@ namespace DesktopClean
             moveFiles.CopyFiles("exe", "exe|apk|app|bat|cgi|com|lnk");
             moveFiles.CopyFiles("web", "html|php|asp|aspx|cer|cfm|csr|css|htm|js|jsp|php|rss|xhtml");
             moveFiles.CopyFiles("compressed", "cbr|7z|deb|gz|pkg|rar|rpm|sitx|tar.gz|zip|zipx");
+            */
 
         }
 

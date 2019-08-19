@@ -33,13 +33,13 @@ namespace DesktopClean
                 pathToMoveFilesFrom = path;
             }
 
-            // Loop the extenstions to pre add a dot on the extenstions
+            // Loop the extenstions to add a dot before the extenstions
             for (int i = 0; i < arrExtenstion.Length; i++)
             {
                 arrExtenstion[i] = "." + arrExtenstion[i];
             }
 
-            // Path to folder
+            // Path to the new folder
             string directoryEndpoint = pathToMoveFilesFrom + @"\" + newFolder + @"\";
 
             // Get all files from path
@@ -54,6 +54,37 @@ namespace DesktopClean
             // Find all files in given directory
             foreach (var fileInDirectoryPath in getFilesFromPath)
             {
+
+                // Try to move all files in current directory to a new folder
+                if(extenstion == "*")
+                {
+
+                    try
+                    {
+
+                        // Check if the folder exsist
+                        if (!Directory.Exists(directoryEndpoint))
+                        {
+                            Console.Write("Creating new folder: {0}", newFolder);
+
+                            // Create a new folder if it doesnt exsist
+                            System.IO.Directory.CreateDirectory(directoryEndpoint);
+
+                        }
+
+
+                        string fileToCopyPath = System.IO.Path.GetFullPath(fileInDirectoryPath);
+                        System.IO.Directory.Move(fileToCopyPath, directoryEndpoint + @"\" + System.IO.Path.GetFileName(fileInDirectoryPath));
+                        Console.WriteLine("Copied: {0} \t from \t {1} \t to \t {2}", System.IO.Path.GetFileName(fileInDirectoryPath), fileToCopyPath, directoryEndpoint);
+
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("There was something wrong when modifying or copying the files/folder.");
+                        Console.WriteLine(e);
+                    }
+
+                }
 
                 // Get extenstion on given file
                 string pathExtenstion = System.IO.Path.GetExtension(fileInDirectoryPath).ToLower();
@@ -91,7 +122,7 @@ namespace DesktopClean
                         // Move file from one location to another
                         System.IO.Directory.Move(fileToCopyPath, directoryEndpoint + @"\" + System.IO.Path.GetFileName(fileInDirectoryPath));
 
-                        Console.WriteLine("{0} \t copied from \t {1} \t to \t {2}", System.IO.Path.GetFileName(fileInDirectoryPath), fileToCopyPath, directoryEndpoint);
+                        Console.WriteLine("Copied: {0} \t from \t {1} \t to \t {2}", System.IO.Path.GetFileName(fileInDirectoryPath), fileToCopyPath, directoryEndpoint);
 
                     }
                     catch(Exception e)
